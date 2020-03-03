@@ -1,8 +1,8 @@
 **Run Command:**
 
-Just CSV File alone : `go build . && ./QuizGame -csv=problems.csv`
+Just CSV File alone : `go build . && ./quiz-game -csv=problems.csv`
 
-After Adding Timer: `go build . && ./QuizGame -limit=2`
+After Adding Timer: `go build . && ./quiz-game -limit=2`
 
 
 **Usages:**
