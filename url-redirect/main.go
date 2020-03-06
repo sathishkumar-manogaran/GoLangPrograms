@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/sathishkumar-manogaran/GoLangPrograms/url-redirect/url-handler"
+	"github.com/sathishkumar-manogaran/GoLangPrograms/url-redirect/handler"
 	"net/http"
 
 	//"github.com/gophercises/urlshort"
@@ -14,9 +14,9 @@ func main() {
 	// Build the MapHandler using the mux as the fallback
 	pathsToUrls := map[string]string{
 		"/facebook-page": "https://facebook.com",
-		"/twitter-page":     "https://twitter.com",
+		"/twitter-page":  "https://twitter.com",
 	}
-	mapHandler := url_handler.MapHandler(pathsToUrls, mux)
+	mapHandler := handler.MapHandler(pathsToUrls, mux)
 
 	// Build the YAMLHandler using the mapHandler as the
 	// fallback
@@ -27,7 +27,7 @@ func main() {
 - path: /gitlab
   url: https://gitlab.com
 `
-	yamlHandler, err := url_handler.YAMLHandler([]byte(yaml), mapHandler)
+	yamlHandler, err := handler.YAMLHandler([]byte(yaml), mapHandler)
 	if err != nil {
 		panic(err)
 	}

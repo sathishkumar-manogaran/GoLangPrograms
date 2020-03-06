@@ -1,4 +1,4 @@
-package url_handler
+package handler
 
 import (
 	"gopkg.in/yaml.v2"
